@@ -31,7 +31,7 @@ xhost +local:docker
 ```
 docker run -it -v <path_to_your_images>:/images -v ~/.ssh:/root/.ssh --name screw_detection --privileged --net host -e DISPLAY=$DISPLAY --env ROS_MASTER_URI=http://localhost:11311 screw_detection_docker
 ```
-3. Export the necessary variables to the environment to pass as arguments for later bash functions:
+3. Export the necessary variables to the environment to pass as arguments for later bash functions, here are some examples:
 ```
 export SD_FILE_NAME=image_ && \
 export SD_SUFFIX=.jpg && \
