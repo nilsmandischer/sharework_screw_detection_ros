@@ -1,0 +1,7 @@
+#Model
+max_depth: 25         #Max depth of the tree
+min_sample_count: 3   #Minimum samples to split a node
+max_iterations: 2000  #Maximum iterations after which training ends
+weight_screws: 1      #Weight of missclassifying a screw as a hole compared to a hole as a screw.
+                      #Value of 10 means missclassifying a screw is 10 times worse than missclassifying a hole. 
+                      #0.1 means the opposite

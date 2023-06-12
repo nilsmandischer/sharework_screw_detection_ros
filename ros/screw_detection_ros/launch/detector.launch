@@ -1,0 +1,8 @@
+<launch>
+
+    <node pkg="screw_detection_ros" type="screw_detection_node" name="screw_detector" output="screen">
+        <rosparam command="load" file="$(find screw_detection_ros)/config/files_common.yaml" />
+        <rosparam command="load" file="$(find screw_detection_ros)/config/detection_common.yaml" />
+    </node>
+
+</launch>

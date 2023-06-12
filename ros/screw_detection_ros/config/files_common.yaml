@@ -1,0 +1,19 @@
+#Paths
+model_data_path :           /catkin_ws/src/images      #The directory the model file (model_data.yaml) is located in
+image_path :                /catkin_ws/src/images      #The directory the stored images are located in
+
+#IO
+image_sub_topic :           /camera/fake_image_raw     #The ROS topic, the raw/rectified image is published in
+camera_frame_name :         base_link                  #The camera reference frame
+
+#Config
+use_dynamic_reconfigure : true
+
+#Compounds of full image name for training.
+## Example: image_path/IMG_0.JPG
+## Prefix: IMG_
+## Suffix: .JPG
+## Starting Number: 0
+image_name_prefix :     image_
+image_name_suffix :     .jpg
+image_starting_number : 1

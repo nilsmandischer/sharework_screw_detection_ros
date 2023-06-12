@@ -1,0 +1,14 @@
+#Scale
+camera_height: 200        # Height of camera above plane with boreholes in centimeter
+camera_angle: 90          # Angle at which camera diverges in degree
+hole_size_cm: 2.3         # Size of boreholes to detect in cm
+table_size_cm : 56        # Size of the table in cm
+                          # << Used to exclude detected holes which are too far from the table center
+screw_radius_cm : 35      # Radius on which the screws are positioned in cm
+
+#Contour Detection. Adaptation using dynamic reconfigure recommended
+contour_threshold: 100          # Screws: Threshold for canny edge detection
+accumulator_threshold: 10       # Screws: Threshold for center detection
+contour_threshold_table: 200    # Table:  Threshold for canny edge detection
+accumulator_threshold_table: 50 # Table:  Threshold for center detection
+

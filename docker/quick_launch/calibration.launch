@@ -1,0 +1,27 @@
+<launch>
+<arg name="data_folder"  	default="/images"/> <!--Folder to publish images from-->
+<arg name="file_name"  	default="image_"/> <!--the full file name contains >data_folder< + "/" + >file_name< + "image_number" + >suffix< -->
+<arg name="suffix"            default=".jpg"/>
+<arg name="first_number"  	default="1"/> 
+<arg name="last_number"  	default="35"/>
+
+<node pkg="image_utilities" type="image_publisher" name="image_publisher" output="screen">
+    <param name="image_topic" 	value="/camera/fake_image_raw" />
+    <param name="data_folder" 	value="$(arg data_folder)" />
+    <param name="filename"            value="$(arg file_name)" />
+    <param name="suffix"              value="$(arg suffix)" />
+    <param name="first_number" 	value="$(arg first_number)" />
+    <param name="last_number" 	value="$(arg last_number)" />
+</node>
+<node pkg="screw_detection_ros" type="screw_detection_node" name="screw_detector" output="log">
+    <param name="model_data_path" 	value="/catkin_ws/src/sharework_screw_detection_ros/modules/sharework_screw_detection/examples/countersunken_screws" />
+    <param name="image_path" 	value="$(arg data_folder)" />
+    <param name="image_sub_topic" 	value="/camera/fake_image_raw" />
+    <param name="camera_frame_name" 	value="base_link" />
+    <param name="use_dynamic_reconfigure" 	value="true" />
+    <rosparam command="load" file="$(find screw_detection_ros)/config/files_common.yaml" />
+    <rosparam command="load" file="$(find screw_detection_ros)/config/detection_common.yaml" />
+</node>
+<node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find screw_detection_ros)/rviz/rviz_detector_config.rviz"/>
+<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="my_rqt_reconfigure"/>
+</launch>

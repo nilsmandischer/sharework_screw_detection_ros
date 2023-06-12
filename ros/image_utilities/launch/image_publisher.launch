@@ -1,0 +1,18 @@
+<launch>
+  <arg name="image_topic"  	default="/camera/fake_image_raw" /> <!--Topic to publish images from-->
+  <arg name="data_folder"  	default="/catkin_ws/src/images"/> <!--Folder to publish images from-->
+  <arg name="file_name"  	default="image_"/> <!--the full file name contains >data_folder< + "/" + >file_name< + "image_number" + >suffix< -->
+  <arg name="suffix"            default=".jpg"/>
+  <arg name="first_number"  	default="1"/> 
+  <arg name="last_number"  	default="35"/>
+
+  <node pkg="image_utilities" type="image_publisher" name="image_publisher" output="screen">
+      <param name="image_topic" 	value="$(arg image_topic)" />
+      <param name="data_folder" 	value="$(arg data_folder)" />
+      <param name="filename"            value="$(arg file_name)" />
+      <param name="suffix"              value="$(arg suffix)" />
+      <param name="first_number" 	value="$(arg first_number)" />
+      <param name="last_number" 	value="$(arg last_number)" />
+  </node>
+
+</launch>

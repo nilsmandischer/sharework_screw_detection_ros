@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- Version 2 package.xml specification -->
+<!-- http://www.ros.org/reps/rep-0140.html -->
+<!-- ROS Wiki for package.xml -->
+<!-- http://wiki.ros.org/catkin/package.xml -->
+<package format="2">
+    <name>screw_detection_msgs</name>
+    <version>1.0.0</version>
+    <description>Main messages used in the Screw Detection ROS module</description>
+
+
+    <!-- One maintainer tag required, multiple allowed, one person per tag -->
+    <maintainer email="mandischer@igmr.rwth-aachen.de">Nils Mandischer</maintainer>
+    <maintainer email="doebler@igmr.rwth-aachen.de">Sebastian Döbler</maintainer>
+
+
+    <!-- Author tags are optional, multiple are allowed, one per tag -->
+    <!-- Authors do not have to be maintainers, but could be -->
+    <author email="mandischer@igmr.rwth-aachen.de">Nils Mandischer</author>
+    <author email="doebler@igmr.rwth-aachen.de">Sebastian Döbler</author>
+
+
+    <!-- One license tag required, multiple allowed, one license per tag -->
+    <!-- Commonly used license strings: -->
+    <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+    <license>TODO</license>
+
+
+    <!-- Use buildtool_depend for build tool packages: -->
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <!-- Use build_depend for packages you need at compile time: -->
+    <build_depend>message_generation</build_depend>
+    <build_depend>geometry_msgs</build_depend>
+    <build_depend>std_msgs</build_depend>
+
+    <!-- Use exec_depend for packages you need at runtime: -->
+    <exec_depend>message_runtime</exec_depend>
+    <exec_depend>geometry_msgs</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+
+    <!-- The export tag contains other, unspecified, tags -->
+    <export>
+        <!-- Other tools can request additional information be placed here -->
+        <architecture_independent/>
+    </export>
+</package>

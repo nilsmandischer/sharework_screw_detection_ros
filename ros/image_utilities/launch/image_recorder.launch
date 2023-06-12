@@ -1,0 +1,10 @@
+<launch>
+  <arg name="image_topic"  default="/camera/image_raw" /> <!--The topic to save images from-->
+  <arg name="data_folder"  default="/images"/> <!--The folder to save images to-->
+
+  <node pkg="image_utilities" type="image_recorder" name="mage_recorder" output="screen">
+      <param name="image_topic" type="str"  value="$(arg image_topic)" />
+      <param name="data_folder" type="str"  value="$(arg data_folder)" />
+  </node>
+
+</launch>

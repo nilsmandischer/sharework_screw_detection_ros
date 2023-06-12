@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>screw_detection_ros</name>
+    <version>1.0.0</version>
+    <description>Application and utilities to detect screws in custom regions of interest.</description>
+
+    <author email="mandischer@igm.rwth-aachen.de">name</author>
+    <author email="doebler@igm.rwth-aachen.de">name</author>
+    <maintainer email="mandischer@igm.rwth-aachen.de">name</maintainer>
+    <maintainer email="doebler@igm.rwth-aachen.de">name</maintainer>
+
+    <license>TODO</license>
+
+    <depend>roscpp</depend>
+    <depend>dynamic_reconfigure</depend>
+    <depend>sensor_msgs</depend>
+    <depend>cv_bridge</depend>
+    <depend>screw_detection_msgs</depend>
+    <depend>geometry_msgs</depend>
+    <buildtool_depend>catkin</buildtool_depend>
+
+</package>

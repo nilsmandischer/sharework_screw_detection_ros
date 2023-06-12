@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="screw_detection_ros" type="screw_detection_training_node" name="screw_trainer" output="screen">
+        <param name="save_cut_training_data" 	value="true" />
+
+        <rosparam command="load" file="$(find screw_detection_ros)/config/files_common.yaml" />
+        <rosparam command="load" file="$(find screw_detection_ros)/config/model_parameters.yaml" />
+        <rosparam command="load" file="$(find screw_detection_ros)/config/detection_common.yaml" />
+    </node>
+
+</launch>

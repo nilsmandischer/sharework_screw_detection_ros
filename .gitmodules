@@ -1,0 +1,3 @@
+[submodule "modules/sharework_screw_detection"]
+	path = modules/sharework_screw_detection
+	url = git@github.com:nilsmandischer/sharework_screw_detection.git
